@@ -117,7 +117,7 @@ def test_dive_setter_interval():
     dive.recording_interval = 'C'
     for ri in ['Z', 'QS', 'QZM', 'Q1', 'Q1Z',
                'Df', 'DZm', 'D1Z']:
-        print('***' + ri)
+        print(('***' + ri))
         with pytest.raises(ValueError):
             dive.recording_interval = ri
         assert dive.recording_interval == 'C'
